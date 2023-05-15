@@ -54,6 +54,9 @@ curl -sSL https://install.pi-hole.net | bash
 If you want to turn off the user leds (the power leds is not affected), simply do this:
 
 echo 0 > /sys/class/leds/beaglebone:green:usr0/brightness
+
 echo 0 > /sys/class/leds/beaglebone:green:usr1/brightness
+
 echo 0 > /sys/class/leds/beaglebone:green:usr2/brightness
+
 echo 0 > /sys/class/leds/beaglebone:green:usr3/brightness
