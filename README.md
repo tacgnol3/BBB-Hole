@@ -41,7 +41,7 @@ RequiredForOnline=yes
 [Network]
 #DHCP=ipv4
 Address=192.168.1.7/24
-Gateway=192.168.1.7
+Gateway=192.168.1.1
 DNS=8.8.8.8
 ```
 
