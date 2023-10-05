@@ -66,7 +66,7 @@ echo 0 > /sys/class/leds/beaglebone:green:usr3/brightness
 ```
 
 
-Finally, to install everything on the emmc if you want :
+Finally, to install everything on the eMMC if you want (If you used the regular image) :
 ```shell
 sudo enable-beagle-flasher
 sudo reboot
