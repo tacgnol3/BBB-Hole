@@ -15,7 +15,7 @@ For my example I used a BBB 2 gig, that doesn't have any wifi or bluetooth (AFAI
 
 Image :
 
-https://rcn-ee.com/rootfs/bb.org/testing/2023-05-03/bullseye-minimal-armhf/am335x-debian-11.7-minimal-armhf-2023-05-03-2gb.img.xz
+[https://rcn-ee.com/rootfs/bb.org/testing/2023-05-03/bullseye-minimal-armhf/am335x-debian-11.7-minimal-armhf-2023-05-03-2gb.img.xz](https://rcn-ee.com/rootfs/bb.org/testing/2023-04-06/bullseye-minimal-armhf/am335x-debian-11.6-minimal-armhf-2023-04-06-2gb.img.xz)
 
 Newer image can be found [here](https://rcn-ee.com/rootfs/bb.org/testing/).
 
