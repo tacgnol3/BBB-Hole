@@ -16,7 +16,8 @@ For my example I used a BBB 2 gig, that doesn't have any wifi or bluetooth (AFAI
 Image :
 
 [Regular image](https://rcn-ee.com/rootfs/bb.org/testing/2023-04-06/bullseye-minimal-armhf/am335x-debian-11.6-minimal-armhf-2023-04-06-2gb.img.xz)
-[eMMC flasher](https://rcn-ee.com/rootfs/bb.org/testing/2023-04-06/bullseye-minimal-armhf/am335x-eMMC-flasher-debian-11.6-minimal-armhf-2023-04-06-2gb.img.xz))
+
+[eMMC flasher](https://rcn-ee.com/rootfs/bb.org/testing/2023-04-06/bullseye-minimal-armhf/am335x-eMMC-flasher-debian-11.6-minimal-armhf-2023-04-06-2gb.img.xz)
 
 Newer/Older image can be found [here](https://rcn-ee.com/rootfs/bb.org/testing/).
 
