@@ -47,7 +47,7 @@ Gateway=192.168.1.1
 DNS=8.8.8.8
 ```
 
-Save & Exit
+Save & Exit with CTRL+O and CTRL+X
 
 ```shell
 sudo Reboot
