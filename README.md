@@ -24,7 +24,7 @@ Newer/Older image can be found [here](https://rcn-ee.com/rootfs/bb.org/testing/)
 Cleanup the already minimal install..
 
 ```shell
-sudo apt autoremove -y bluez bb-wlan0-defaults firmware-iwlwifi firmware-atheros rsync wireguard-tools vim* bb-u-boot-am5* bb-cape-overlays 1firmware-libertas firmware-realtek firmware-brcm80211 firmware-zd1211 firmware-realtek btrfs-progs wpasupplicant iw wireless-regdb
+sudo apt autoremove -y bluez bb-wlan0-defaults firmware-iwlwifi firmware-atheros rsync wireguard-tools vim* bb-u-boot-am5* bb-cape-overlays firmware-libertas firmware-realtek firmware-brcm80211 firmware-zd1211 firmware-realtek btrfs-progs wpasupplicant iw wireless-regdb
 ```
 
 Setup a static IP
