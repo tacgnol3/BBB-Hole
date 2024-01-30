@@ -49,8 +49,9 @@ DNS=8.8.8.8
 
 Save & Exit
 
-Reboot
-
+```shell
+sudo Reboot
+```
 
 
 And finally install-pi-hole
@@ -67,16 +68,16 @@ echo 0 > /sys/class/leds/beaglebone:green:usr3/brightness
 ```
 
 
-To install everything on the eMMC if you want (If you used the regular image) :
-```shell
-sudo enable-beagle-flasher
-sudo reboot
-```
-
-
 Finally, to save some space, I recommend to disable the journal service
 
 ```shell
 sudo systemctl disable systemd-journald.service
+sudo reboot
+```
+
+
+To install everything on the eMMC if you want (only if you used the regular image) :
+```shell
+sudo enable-beagle-flasher
 sudo reboot
 ```
