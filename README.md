@@ -63,7 +63,7 @@ DNS=8.8.8.8
 Save & Exit with CTRL+O and CTRL+X
 
 ```shell
-sudo Reboot
+sudo reboot
 ```
 
 
