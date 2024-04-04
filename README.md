@@ -12,20 +12,31 @@ I believe a simplified guide can be done.
 
 For my example I used a BBB 2 gig, that doesn't have any wifi or bluetooth (AFAIK).
 
+(Updated for debian 12 image)
 
 Image :
 
-[Regular image](https://rcn-ee.com/rootfs/bb.org/testing/2023-04-06/bullseye-minimal-armhf/am335x-debian-11.6-minimal-armhf-2023-04-06-2gb.img.xz)
+[Minimal image](https://rcn-ee.com/rootfs/debian-armhf-12-bookworm-minimal-mainline/2024-04-04/am335x-debian-12.5-minimal-armhf-2024-04-04-2gb.img.bz2)
 
-[eMMC flasher](https://rcn-ee.com/rootfs/bb.org/testing/2023-04-06/bullseye-minimal-armhf/am335x-eMMC-flasher-debian-11.6-minimal-armhf-2023-04-06-2gb.img.xz)
+Newer/Older image can be found [here](https://rcn-ee.com/rootfs/debian-armhf-12-bookworm-minimal-mainline/).
 
-Newer/Older image can be found [here](https://rcn-ee.com/rootfs/bb.org/testing/).
+I recommend Balena Etcher to write the image to the sd card.
+
+
+First, to save some space, I recommend to disable the journal service since the free space is already low.
+
+```shell
+sudo systemctl disable systemd-journald.service
+sudo reboot
+```
+
 
 Cleanup the already minimal install..
 
 ```shell
-sudo apt autoremove -y bluez bb-wlan0-defaults firmware-iwlwifi firmware-atheros rsync wireguard-tools vim* bb-u-boot-am5* bb-cape-overlays firmware-libertas firmware-realtek firmware-brcm80211 firmware-zd1211 firmware-realtek btrfs-progs wpasupplicant iw wireless-regdb
+sudo apt autoremove -y bluez bb-u-boot-am5* bb-wlan0-defaults btrfs-progs firmware-atheros firmware-brcm80211 firmware-iwlwifi firmware-libertas firmware-realtek iw nginx* rsync vim* wireguard-tools wireless-regdb
 ```
+
 
 Setup a static IP
 ```shell
@@ -42,8 +53,8 @@ RequiredForOnline=yes
 
 [Network]
 #DHCP=ipv4
-Address=192.168.1.7/24
-Gateway=192.168.1.1
+Address=192.168.1.7/24  #Adjust for your setup
+Gateway=192.168.1.1  #Adjust for your setup
 DNS=8.8.8.8
 ```
 
@@ -59,25 +70,19 @@ And finally install-pi-hole
 curl -sSL https://install.pi-hole.net | bash
 ```
 
-If you want to turn off the user leds (the power leds is not affected), simply do this:
+(optional) Finally, to install everything on the eMMC if you want:
+```shell
+sudo apt install bb-beagle-flasher
+sudo enable-beagle-flasher
+sudo reboot
+```
+
+Don't forget to change the default password with "passwd"
+
+(Optional) If you want to turn off the user leds (the power leds is not affected), simply do this:
 ```shell
 echo 0 > /sys/class/leds/beaglebone:green:usr0/brightness
 echo 0 > /sys/class/leds/beaglebone:green:usr1/brightness
 echo 0 > /sys/class/leds/beaglebone:green:usr2/brightness
 echo 0 > /sys/class/leds/beaglebone:green:usr3/brightness
-```
-
-
-Finally, to save some space, I recommend to disable the journal service
-
-```shell
-sudo systemctl disable systemd-journald.service
-sudo reboot
-```
-
-
-To install everything on the eMMC if you want (only if you used the regular image) :
-```shell
-sudo enable-beagle-flasher
-sudo reboot
 ```
