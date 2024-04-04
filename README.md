@@ -27,7 +27,7 @@ First, to save some space, I recommend to disable the journal service since the 
 
 ```shell
 sudo systemctl disable systemd-journald.service
-cd /var/log/journal/  # And then press tab for the next folder since it seems to be a random long string
+cd /var/log/journal/  # And then press TAB for the next folder since it seems to be a random long string
 sudo rm *.journal
 sudo reboot
 ```
