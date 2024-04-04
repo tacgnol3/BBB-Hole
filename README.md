@@ -40,7 +40,7 @@ sudo apt autoremove -y bluez bb-u-boot-am5* bb-wlan0-defaults btrfs-progs firmwa
 ```
 
 
-Setup a static IP
+Setup a static IP (Adjust for your setup)
 ```shell
 sudo nano /etc/systemd/network/eth0.network
 ```
@@ -55,8 +55,8 @@ RequiredForOnline=yes
 
 [Network]
 #DHCP=ipv4
-Address=192.168.1.7/24  #Adjust for your setup
-Gateway=192.168.1.1  #Adjust for your setup
+Address=192.168.1.7/24
+Gateway=192.168.1.1
 DNS=8.8.8.8
 ```
 
