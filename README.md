@@ -24,7 +24,6 @@ I recommend Balena Etcher to write the image to the sd card.
 
 (optional) First, to install everything on the eMMC if you want:
 ```shell
-sudo apt install bb-beagle-flasher
 sudo enable-beagle-flasher
 sudo reboot
 ```
