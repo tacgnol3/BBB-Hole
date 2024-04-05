@@ -72,7 +72,7 @@ sudo reboot
 ```
 
 
-And finally install-pi-hole
+And finally install pi-hole
 ```shell
 curl -sSL https://install.pi-hole.net | bash
 ```
